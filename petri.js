@@ -15,12 +15,12 @@ class Petri {
     this.visual = false;
   }
   
-  setSize() {
+  init() {
     this.rl.question('How big is the dish? ',response => {
       const size = parseInt(response);
       if(isNaN(size) || size <= 3){
         console.log('Error: Invalid Size');
-        this.setSize();
+        this.init();
       } else {
         console.log(`Created Petri Dish of size ${size}x${size}`);
         this.dish = Array.from(Array(size), () => Array(size).fill(false))
@@ -113,7 +113,7 @@ class Petri {
     this.rl.question('Would you like to run another Generation? (yes or no)', response => {
       response = response.toLowerCase();
       if(response == 'yes') this.generate();
-      else if(response == 'no') this.setSize();
+      else if(response == 'no') this.init();
       else {
         console.log('Error: Invalid Answer');
         this.continue();
