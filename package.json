@@ -1,0 +1,12 @@
+{
+  "name": "bacteria",
+  "version": "1.0.0",
+  "description": "A simulation of a 2-dimensional grid petri dish of bacteria",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node index.js",
+    "start-visual": "clear && node index.js -visual"
+  },
+  "author": "Michael Van Der Velden <mikevdv@vandie.co.uk>",
+  "license": "MIT"
+}
